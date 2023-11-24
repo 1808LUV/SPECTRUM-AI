@@ -10,7 +10,7 @@ const openai = new OpenAI({
 });
 
 const instructionMessage: ChatCompletionMessageParam = {
-  role: "system",
+  role: "user",
   content: "You are a code generator",
 };
 

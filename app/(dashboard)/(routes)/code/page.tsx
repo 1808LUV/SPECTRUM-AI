@@ -41,10 +41,12 @@ const CodePage = () => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
+      // throw new Error("Something")
       const userMessage: ChatCompletionMessageParam = {
         role: "user",
         content: values.prompt,
       };
+
       const newMessages = [...messages, userMessage];
 
       const response = await axios.post("/api/code", {
